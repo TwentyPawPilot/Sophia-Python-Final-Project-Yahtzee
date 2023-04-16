@@ -1,0 +1,39 @@
+Sophia Python Project - Yahtzee Pseudocode
+By Pat Schwanfelder
+
+Author's Note #1: It is assumed that the reader knows the rules of Yahtzee. Please refer
+to the following webpage for rules and common terms for the game:
+https://en.wikipedia.org/wiki/Yahtzee#Rules
+
+Author's Note #2: The author refers to the "Upper section" as the "Lower hand", and
+the "Lower section" as the "Upper hand" due to house rules when growing up.
+
+Start program:
+	Prompt user for number of players
+	Prompt user for each player's name
+	Record number of players total
+
+	Create a scorecard for each player
+	Scorecard must contain the following spaces:
+		A lower hand section for scoring ones through sixes
+		An upper hand section with the special rolls:
+			3/4/5 of a kind, full house, small/large straights, etc.
+		A method to calculate its total score
+		A method to see if a spot has been played previously to prevent a player from overwriting a previous score
+
+	Loop through 13 iterations of the following (there are 13 categories and players cannot skip a category. Hard coding 13 loops makes sense)
+		Each player takes a turn and does the following:
+			Roll 5 dice to make a "hand"
+			Ask the user which dice in the hand they want to keep (these won't be changed)
+			The remaining dice will be rolled again
+			Repeat this process up to two times (for a total of three rolls)
+
+		Ask the player where they want to take thier points
+			Get user input to determine the category the player wants
+			Determine how many points the user is awarded for that category
+
+		Repeat for the next player
+		Repeat until each card has been filled
+
+	Look at all the scorecards to see who has the highest total
+	Declare the highest value to be the winner.
